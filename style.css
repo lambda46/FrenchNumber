@@ -60,7 +60,7 @@ input[type="range"] {
 }
 
 .number-display {
-  font-size: 3.5rem; /* 9桁表示用に少し縮小 */
+  font-size: 3.5rem;
   font-weight: bold;
   color: #007aff;
   margin: 1rem 0 1.5rem 0;
