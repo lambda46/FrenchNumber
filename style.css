@@ -74,8 +74,8 @@ input[type="range"] {
   margin-bottom: 1rem;
 }
 input[type="text"] {
-  width: 100%; /* ←ここを 85% から 100% に変更 */
-  box-sizing: border-box; /* ←この1行を新しく追加 */
+  width: 100%;
+  box-sizing: border-box;
   padding: 0.75rem;
   font-size: 1.1rem;
   border: 2px solid #e5e5ea;
