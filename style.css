@@ -1,0 +1,132 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.container {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.sliders-wrapper {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+}
+.slider-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.slider-group:last-child {
+  margin-bottom: 0;
+}
+.slider-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+input[type="range"] {
+  width: 100%;
+  accent-color: #007aff;
+  cursor: pointer;
+}
+.range-display {
+  font-size: 0.85rem;
+  color: #007aff;
+  font-weight: bold;
+  margin-top: 1rem;
+  word-break: break-all;
+}
+
+.number-display {
+  font-size: 3.5rem; /* 9桁表示用に少し縮小 */
+  font-weight: bold;
+  color: #007aff;
+  margin: 1rem 0 1.5rem 0;
+  user-select: none;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+  line-height: 1.2;
+}
+.input-area {
+  margin-bottom: 1rem;
+}
+input[type="text"] {
+  width: 100%; /* ←ここを 85% から 100% に変更 */
+  box-sizing: border-box; /* ←この1行を新しく追加 */
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  border: 2px solid #e5e5ea;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s;
+}
+input[type="text"]:focus {
+  border-color: #007aff;
+}
+button {
+  background-color: #007aff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+button:hover {
+  background-color: #005bb5;
+}
+button:disabled {
+  background-color: #e5e5ea;
+  color: #8e8e93;
+  cursor: not-allowed;
+}
+.feedback {
+  min-height: 5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+.correct { color: #34c759; }
+.incorrect { color: #ff3b30; }
+.correct-answer {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 0.5rem;
+  word-break: break-word;
+  line-height: 1.4;
+}
+.score {
+  font-size: 0.9rem;
+  color: #8e8e93;
+  margin-top: 1rem;
+}
