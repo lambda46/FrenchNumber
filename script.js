@@ -115,13 +115,19 @@ function generateNumber() {
     const minVal = parseInt(minDigitSlider.value, 10);
     const maxVal = parseInt(maxDigitSlider.value, 10);
     
-    const minBound = Math.pow(10, minVal - 1);
-    const maxBound = Math.pow(10, maxVal) - 1;
+    // 1. 指定範囲内から「出題する桁数」をランダムに決定する
+    const targetDigit = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
     
-    // 桁数に応じた範囲で乱数を生成
+    // 2. 決定した桁数の中で、最小値と最大値を計算する
+    const minBound = Math.pow(10, targetDigit - 1);
+    const maxBound = Math.pow(10, targetDigit) - 1;
+    
+    // 3. その桁数の範囲内でランダムな数値を生成する
     currentNumber = Math.floor(Math.random() * (maxBound - minBound + 1)) + minBound;
+    
     numberDisplay.textContent = formatNumber(currentNumber);
     
+    // UIのリセット処理
     userInput.value = '';
     userInput.disabled = false;
     userInput.focus();
@@ -129,7 +135,6 @@ function generateNumber() {
     checkBtn.disabled = false;
     nextBtn.disabled = true;
 }
-
 function checkAnswer() {
     const answer = userInput.value.trim().toLowerCase().replace(/\s+/g, ' ');
     if (answer === '') return;
